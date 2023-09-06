@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover Effect Boxes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; 
+            height: 100vh; 
+            align-items: flex-start; 
+        }
+
+        .box {
+            border-radius: 10px;
+            width: 50px;
+            margin-left: -10px;
+            height: 50px;
+            margin-top: 5px;
+            margin-bottom: 5px; 
+            transition: transform 0.3s ease, width 0.3s ease;
+        }
+
+        .box:nth-child(1) {
+            background-color: red;
+        }
+
+        .box:nth-child(2) {
+            background-color: blue;
+        }
+
+        .box:nth-child(3) {
+            background-color: green;
+        }
+
+        .box:nth-child(4) {
+            background-color: yellow;
+        }
+
+        /* Hover effect */
+        .box:hover {
+            transform: translateX(0) scale(1);
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is how look after adding hovour</h1>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

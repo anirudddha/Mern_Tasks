@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #9ec7e1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0.5, 0.6);
+
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            width: 40%;
+        }   
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #3a6b85;
+            border-radius: 5px;
+            background-color: #d2e2ec;
+        }
+        .gender-group{
+            display: flex;
+            justify-content: start;
+            margin-bottom: 10px;
+        }
+        .gender-group label{
+            font-weight: bold;
+            width: 39%;
+        }
+        .gender-group td{
+            margin-left: 10px;
+        }
+        .gender-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    
+    <div class="container">
+        <form action="process_registration.php" method="post">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="repassword">Re-enter Password:</label>
+                <input type="password" id="repassword" name="repassword" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+
+            <div class="gender-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" >
+                <td for="male">Male</td>
+                <input type="radio" id="female" name="gender" value="female">
+                <td for="female">Female</td>
+                <input type="radio" id="other" name="gender" value="other">
+                <td for="other">Other</td>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            
+            <input type="submit" value="Save">
+        </form>
+    </div>
+</body>
+</html>
